@@ -23,24 +23,25 @@ def find_word(string_list):
     """ Return a list of words that contain three digit numbers in the middle. """
 
     # initialize an empty list
-
+    list_of_threes = []
     # define the regular expression
-
+    regex_expresh = "[a-zA-Z] + \d\d\d[a-zA-Z]+"
     # loop through each line of the string list 
-
+    for line in string_list:
     # find all the words that match the regular expression in each line
-    
+        correct_words = re.findall(regex_expresh, line) 
     # loop through the found words and add the words to your empty list 
-
+        for word in correct_words:
+            list_of_threes.append(word)
     #return the list of all words that start with the letter B, E, or T
-    pass
+    return list_ofthrees
 
 
 def find_days(string_list):
     """ Return a list of days from the list of strings the dates format in the text are MM/DD/YYYY. """  
 
     # initialize an empty list
-
+    
     # define the regular expression
 
     # loop through each line of the string list
